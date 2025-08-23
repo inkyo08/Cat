@@ -1,4 +1,6 @@
 #include "log.h"
+#include <stdarg.h>
+
 
 #define MAX_CALLBACKS 32
 
