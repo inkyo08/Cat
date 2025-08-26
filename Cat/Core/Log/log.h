@@ -5,13 +5,13 @@
 #include <time.h>
 
 typedef struct {
-    va_list ap;
-    const char *fmt;
-    const char *file;
-    struct tm *time;
-    void *udata;
-    int line;
-    int level;
+  va_list ap;
+  const char *fmt;
+  const char *file;
+  struct tm *time;
+  void *udata;
+  int line;
+  int level;
 } log_Event;
 
 typedef void (*log_LogFn)(log_Event *ev);
