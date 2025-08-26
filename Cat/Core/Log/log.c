@@ -111,7 +111,15 @@ int log_add_fp(FILE *fp, int level) {
 static void init_event(log_Event *ev, void *udata) {
   if (!ev->time) {
     time_t t = time(NULL);
-    ev->time = localtime(&t);
+    static struct tm tm_buf;
+
+#if defined(_WIN32) || defined(_WIN64)
+    localtime_s(&tm_buf, &t);
+    ev->time = &tm_buf;
+#else
+    localtime_r(&t, &tm_buf);
+    ev->time = &tm_buf;
+#endif
   }
   ev->udata = udata;
 }
