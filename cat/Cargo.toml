@@ -1,0 +1,12 @@
+[package]
+name = "cat"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "cat"
+path = "./cat.rs"
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+cor = { path = "./cor" }
