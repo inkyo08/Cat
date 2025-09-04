@@ -1,5 +1,5 @@
-// 먼저 이 컴포넌트의 이름을 명시해야 합니다. (대소문자 구분)
-component Foo
+// 먼저 이 컴포넌트의 이름을 명시해야 합니다.
+component foo
 
 // 에디터에 노출할 멤버 변수 -> 항상 const
 member float movespeed;
