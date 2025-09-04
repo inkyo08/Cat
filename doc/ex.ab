@@ -1,0 +1,32 @@
+// 먼저 이 컴포넌트의 이름을 명시해야 합니다. (대소문자 구분)
+component Foo
+
+// 에디터에 노출할 멤버 변수 -> 항상 const
+
+member float movespeed;
+member float hp;
+
+// initialize 이 컴포넌트를 가진 엔티티가 생성될 때 실행됩니다.
+init {
+
+}
+
+// update 한 프레임마다 실행됩니다.
+update {
+
+}
+
+// disabled 이 컴포넌트를 가진 엔티티가 비활성화 될 때 실행됩니다.
+disabled {
+
+}
+
+// destroyed 이 컴포넌트를 가진 엔티티가 파괴 될 때 실행됩니다.
+destroyed {
+
+}
+
+# 기본적으로 함수/변수 선언 등은 C++의 형식을 따라갑니다.
+void bar() {
+
+}
